@@ -1,14 +1,62 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <title>Test Server</title>
-</head>
-<body style="background: #222; color: white; text-align: center; padding: 50px; font-family: sans-serif;">
+{% extends "layouts/base.html" %}
 
-    <h1>Server jalan!</h1>
-    <p>Ini adalah halaman website pertama</p>
-    <small>Status: Connected</small>
+{% block title %}Dashboard Utama{% endblock %}
 
-</body>
-</html>
+{% block content %}
+    <div class="text-center py-8 md:py-16"> <div class="text-5xl md:text-7xl text-blue-500 mb-4 animate-bounce">
+            <i class="fas fa-school text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"></i>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+            Welcome to FOURFO
+        </h1>
+        
+        <p class="text-gray-400 text-sm md:text-xl mb-8 px-4">Ruang Kelas Teknik Komputer dan Jaringan</p>
+        
+        <div class="inline-block p-1 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg hover:shadow-blue-500/50 transition cursor-pointer group hover:-translate-y-2 duration-300">
+            <button class="px-5 py-2 bg-gray-900 rounded-md text-white font-bold hover:bg-slate-900 items-center gap-3">
+                <span>Mulai Jelajahi</span>
+                <i class="fas fa-rocket"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8 mt-6 md:mt-10 px-2 md:px-0">
+        
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition cursor-pointer group hover:-translate-y-4 duration-300">
+            <div class="flex items-center gap-4">
+                <div class="text-blue-400 text-3xl group-hover:scale-110 transition-transform">
+                    <i class="far fa-calendar-alt"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-blue-300">Jadwal Pelajaran</h3>
+                    <p class="text-xs text-gray-400">Cek mapel hari ini.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition cursor-pointer group hover:-translate-y-4 duration-300">
+             <div class="flex items-center gap-4">
+                <div class="text-purple-400 text-3xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-camera-retro"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-purple-300">Galeri Kelas</h3>
+                    <p class="text-xs text-gray-400">Dokumentasi seru.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-pink-500 transition cursor-pointer group hover:-translate-y-4 duration-300">
+             <div class="flex items-center gap-4">
+                <div class="text-pink-400 text-3xl group-hover:scale-110 transition-transform">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-pink-300">Pesan Anonim</h3>
+                    <p class="text-xs text-gray-400">Kirim rahasia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
