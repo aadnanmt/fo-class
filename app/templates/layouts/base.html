@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FOCLSS{% endblock %} | Dashboard Kelas</title>
+    
+    <!-- i am use turbo.js cdn, now. while for development -->
+    <script type="module">
+        import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+    </script>
+
+    <!-- i am use turbo.js cdn, now. while for development too-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- output from compile tailwindcss -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/output.css') }}">
+</head>
+
+<!-- body start -->
+<body class="bg-gray-900 text-gray-100 font-sans antialiased min-h-screen flex flex-col">
+
+    {% include 'layouts/partials/_navbar.html' %}
+
+    <!-- main start -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        {% block content %}
+            {% endblock %}
+    </main>
+    <!-- main end -->
+
+    <!-- footer start -->
+    <footer class="bg-gray-800 text-center py-4 mt-8 border-t border-gray-700">
+        <p class="text-gray-500 text-sm">© 2024 FOCLASS Project</p>
+    </footer>
+    <!-- footer end -->
+
+</body>
+<!-- body end -->
+</html>
