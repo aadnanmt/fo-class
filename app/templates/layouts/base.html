@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}FOCLSS{% endblock %} | Dashboard Kelas</title>
+    <title>{% block title %}FOUR FO{% endblock %} | Dashboard Kelas</title>
     
     <!-- i am use turbo.js cdn, now. while for development -->
     <script type="module">
@@ -20,6 +20,7 @@
 <!-- body start -->
 <body class="bg-gray-900 text-gray-100 font-sans antialiased min-h-screen flex flex-col">
 
+    <!-- navbar -->
     {% include 'layouts/partials/_navbar.html' %}
 
     <!-- main start -->
@@ -28,13 +29,14 @@
             {% endblock %}
     </main>
     <!-- main end -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
-    <!-- footer start -->
-    <footer class="bg-gray-800 text-center py-4 mt-8 border-t border-gray-700">
-        <p class="text-gray-500 text-sm">© 2024 FOCLASS Project</p>
-    </footer>
-    <!-- footer end -->
+    <!-- footer -->
+    {% include 'layouts/partials/_footer.html' %}
 
+    <!-- bgm -->
+    {% include 'layouts/partials/_music_widget.html' %}
+    
 </body>
 <!-- body end -->
 </html>
