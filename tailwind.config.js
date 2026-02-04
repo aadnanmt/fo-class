@@ -14,8 +14,8 @@ module.exports = {
         'mono': ['"Share Tech Mono"', 'monospace'],
       },
       colors: {
-        'blue': '#00f3ff',
-        'pink': '#ff00ff',
+        'neon-blue': '#00f3ff',
+        'neon-pink': '#ff00ff',
       },
       animation: {
         'marquee': 'marquee 10s linear infinite',
