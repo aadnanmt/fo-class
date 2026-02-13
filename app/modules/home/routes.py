@@ -1,3 +1,5 @@
+# app/modules/home/routes.py
+
 from flask import render_template
 from . import home_bp
 

@@ -1,3 +1,5 @@
+# app/modules/home/__init__.py
+
 from flask import Blueprint
 
 # create Blueprint
