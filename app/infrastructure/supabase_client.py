@@ -15,10 +15,10 @@ def get_supabase_client() -> Client:
         
         
         if not url or not key:
-            raise ValueError("Error: SUPABASE_URL or SUPABASE_KEY 'NOT FOUND' in file .env!")
+            raise ValueError("ERROR: Your SUPABASE_URL or SUPABASE_KEY 'NOT FOUND' in file .env!")
             
         # create connection
         _supabase_client = create_client(url, key)
-        print("Success, connected to Supabase")
+        print("Success, connect to Supabase")
 
     return _supabase_client
