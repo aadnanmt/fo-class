@@ -1,5 +1,5 @@
+// app/static/js/main.js
 
-// for path: app/templates/layouts/partials/_music_widget.html
 function toggleMusic() {
     var audio = document.getElementById("bgm-player");
     var icon = document.getElementById("music-icon");
@@ -13,3 +13,5 @@ function toggleMusic() {
 }
 
 // end | for path: app/templates/layouts/partials/_music_widget.html
+
+// start | compress via browser

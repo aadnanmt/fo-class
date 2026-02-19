@@ -1,9 +1,9 @@
 # app/config.py
 
 import os
-from dotenv import load_dotenv
+from dotenv import load_dotenv # your .env.example
 
-# 1. load fil file .env to memory
+# load fil file .env to memory
 load_dotenv()
 
 class Config:

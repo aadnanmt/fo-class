@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "concurrently \"npm run tailwind\" \"npm run flask",
+    "dev": "concurrently \"npm run tailwind\" \"npm run flask\"",
     "tailwind": "npx @tailwindcss/cli -i ./src/css/input.css -o ./app/static/dist/output.css -w",
     "flask": "source venv/bin/activate && flask run",
     "build": "npx @tailwindcss/cli -i ./src/css/input.css -o ./app/static/dist/output.css -b"

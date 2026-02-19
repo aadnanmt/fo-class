@@ -1,5 +1,8 @@
+# requirements.txt
+
 Flask==3.1.2
 Pillow==12.1.0
 python-dotenv==1.2.1
 supabase==2.27.3
 Werkzeug==3.1.5
+bleach==6.3.0
