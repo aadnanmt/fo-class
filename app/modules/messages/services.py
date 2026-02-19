@@ -1,5 +1,6 @@
 # app/modules/messages/services.py
 
+import bleach
 from . import repositories
 
 # list bad word
@@ -20,6 +21,9 @@ def process_new_message(raw_content: str):
     for word in BAD_WORD:
         # replace bad word with ****
         clean_content = clean_content.replace(word, "*" * len(word))
+
+    # sanitize xss before save
+    clean_content = bleach.clean(clean_content, tags=[], strip=True)
 
     # save message to db supabase
     return repositories.add_message(clean_content)
