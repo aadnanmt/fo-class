@@ -1,7 +1,9 @@
+# app/modules/messages/services.py
+
 from . import repositories
 
 # list bad word
-BAD_WORD = ["bodoh", "jelek", "anjing", "kasar", "tolol",]
+BAD_WORD = ["bodoh", "jelek", "anjing", "kasar", "tolol", "stupid", "idiot", "goblok", "bangsat", "bajingan", "brengsek", "sialan", "anj", "babi", "kontol", "memek", "perek", "pepek", "jembut", "jancok", "kampret", "gila", "sarap", "bangsad","pantek", "panteq"]
 
 def process_new_message(raw_content: str):
     
