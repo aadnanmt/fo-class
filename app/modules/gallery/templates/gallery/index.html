@@ -1,0 +1,62 @@
+<!-- app/modules/gallery/templates/gallery/index.html -->
+
+{% extends "layouts/base.html" %}
+
+{% block title %}Galeri Kelas{% endblock %}
+
+{% block content %}
+<div class="py-10">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-64 bg-blue-600/20 blur-[100px] rounded-full -z-10">
+    </div>
+    <div class="text-center mb-10">
+        <h1 class="font-cyber text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-pink">
+            MEMORI KELAS
+        </h1>
+        <p class="font-mono text-gray-400">
+            Ini Galeri Kelas TKJ FO
+        </p>
+    </div>
+    <div class="max-w-xl mx-auto mb-12">
+        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 shadow-lg relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-1 h-full bg-neon-blue">
+            </div>
+            <h3 class="font-cyber text-xl text-white mb-4 flex items-center gap-2">
+                <i class="fas fa-cloud-upload-alt text-neon-blue">
+                </i>
+                Upload Data Baru
+            </h3>
+            <form class="flex" enctype="multipart/form-data" method="POST">
+                <input accept="image/*" class="block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-gray-700 file:text-neon-blue hover:file:bg-gray-600 cursor-pointer" name="photo" type="file"/>
+                <button class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-lg font-bold transition" type="submit">
+                    UPLOAD
+                </button>
+            </form>
+        </div>
+    </div>
+    {% if photos %}
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {% for photo in photos %}
+        <div class="relative group overflow-hidden rounded-xl border border-gray-800 bg-gray-900 aspect-square">
+            <img alt="{{ photo.name }}" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-500 ease-in-out" loading="lazy" src="{{ photo.url }}">
+                <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <a class="text-white font-mono text-xs px-3 py-1 border border-neon-pink rounded-full hover:bg-neon-pink hover:text-black transition" href="{{ photo.url }}" target="_blank">
+                        VIEW FULL SIZE
+                    </a>
+                </div>
+            </img>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center py-20 border-2 border-dashed border-gray-700 rounded-xl">
+        <div class="text-6xl text-gray-700 mb-4">
+            <i class="fas fa-folder-open">
+            </i>
+        </div>
+        <p class="font-mono text-gray-500">
+            Upload foto pertama, yuk!
+        </p>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
