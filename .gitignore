@@ -2,5 +2,5 @@ venv/
 .env
 __pycache__/
 tailwindcss
-README.md
 node_modules/
+README.md
